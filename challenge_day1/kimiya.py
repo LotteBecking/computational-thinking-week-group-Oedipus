@@ -1,2 +1,2 @@
 kimiya = str("kimiya")
-print (myname)
+print (kimiya)

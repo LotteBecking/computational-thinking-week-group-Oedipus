@@ -1,2 +1,2 @@
-name = str("Ana Contreras")
-print(name)
+ana = str("Ana Contreras")
+print(ana)

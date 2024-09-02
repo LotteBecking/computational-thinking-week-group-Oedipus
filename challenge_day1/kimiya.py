@@ -1,2 +1,2 @@
-myname = str("Kimiya")
+kimiya = str("kimiya")
 print (myname)

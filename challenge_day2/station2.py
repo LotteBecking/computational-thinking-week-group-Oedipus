@@ -19,11 +19,5 @@ def get_japanese_weekday(date_str):
     
     return japanese_day
 
-def solution_station_2(new_input, pattern_sets):
-    for sample_input, _, sample_output in pattern_sets:
-        if solution_station_2(sample_input) == sample_output:
-            return solution_station_2(new_input)
-    
-    return "No matching pattern found."
-
-
+def solution_station_2(new_input):
+    return get_japanese_weekday(new_input)

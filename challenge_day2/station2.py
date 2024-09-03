@@ -12,12 +12,14 @@ def get_japanese_weekday(date_str):
     }
 
     date_obj = datetime.datetime.strptime(date_str, '%Y-%m-%d')
-    
     english_day = date_obj.strftime('%A')
-    
     japanese_day = weekday_map[english_day]
     
     return japanese_day
 
-def solution_station_2(new_input):
-    return get_japanese_weekday(new_input)
+def solution_station_1(new_input, pattern_sets):
+    for sample_input, _, sample_output in pattern_sets:
+        if get_japanese_weekday(sample_input) == sample_output:
+            return get_japanese_weekday(new_input)
+    
+    return "No matching pattern found."

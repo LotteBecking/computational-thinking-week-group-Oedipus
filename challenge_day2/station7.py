@@ -5,5 +5,5 @@ def solution_station_7(input):
     d = 7
     e = 0.5
     
-    output = eval(input)
+    output = float(eval(input))
     return output

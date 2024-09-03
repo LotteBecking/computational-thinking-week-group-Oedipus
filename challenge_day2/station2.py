@@ -1,7 +1,8 @@
 import datetime
 
-def get_japanese_weekday(date_str):
-    weekday_map = {
+def solution_station_2(date_str):
+    # Mapping of days of the week to their Japanese equivalents
+    days_in_japanese = {
         "Monday": "月曜日",
         "Tuesday": "火曜日",
         "Wednesday": "水曜日",
@@ -10,16 +11,12 @@ def get_japanese_weekday(date_str):
         "Saturday": "土曜日",
         "Sunday": "日曜日"
     }
-
-    date_obj = datetime.datetime.strptime(date_str, '%Y-%m-%d')
-    english_day = date_obj.strftime('%A')
-    japanese_day = weekday_map[english_day]
     
-    return japanese_day
-
-def solution_station_1(new_input, pattern_sets):
-    for sample_input, _, sample_output in pattern_sets:
-        if get_japanese_weekday(sample_input) == sample_output:
-            return get_japanese_weekday(new_input)
+    # Convert the string date into a datetime object
+    date_obj = datetime.datetime.strptime(date_str, "%d-%m-%Y")
     
-    return "No matching pattern found."
+    # Get the day of the week in English
+    day_of_week = date_obj.strftime("%A")
+    
+    # Return the corresponding day in Japanese
+    return days_in_japanese[day_of_week]

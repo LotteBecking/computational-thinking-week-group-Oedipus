@@ -1,7 +1,7 @@
 import pandas as pd
 
 # read the CSV file
-df = pd.read_csv("challenge_day2/Student_Learning_Teams.csv")
+df = pd.read_csv("Student_Learning_Teams.csv")
 
 # rename columns to match the header in your file
 df.columns = ['Student', 'Team']

@@ -1,37 +1,17 @@
-import datetime
-
-def get_japanese_weekday(date_str):
-    weekday_map = {
-        "Monday": "月曜日",
-        "Tuesday": "火曜日",
-        "Wednesday": "水曜日",
-        "Thursday": "木曜日",
-        "Friday": "金曜日",
-        "Saturday": "土曜日",
-        "Sunday": "日曜日"
-    }
-
-    date_obj = datetime.datetime.strptime(date_str, '%Y-%m-%d')
-    
-    english_day = date_obj.strftime('%A')
-    
-    japanese_day = weekday_map[english_day]
-    
-    return japanese_day
-
-def find_matching_pattern(new_input, pattern_sets):
-    for sample_input, _, sample_output in pattern_sets:
-        if get_japanese_weekday(sample_input) == sample_output:
-            return get_japanese_weekday(new_input)
-    
-    return "No matching pattern found."
-
-pattern_sets = [
-    ('2023-12-10', '2024-10-21', "日曜日"),
-    ('2023-06-08', '2024-02-12', "木曜日"),
-    ('2023-01-07', '2023-12-19', "土曜日")
-]
-
-new_input = input("Enter the new input date (YYYY-MM-DD): ")
-output = find_matching_pattern(new_input, pattern_sets)
-print(f"The output for {new_input} is {output}.")
+from datetime import datetime
+def solution_station_2(date):
+    date.weekday()
+    if date.weekday() == 0:
+        return "月曜日"
+    elif date.weekday() == 1:
+        return "火曜日"
+    elif date.weekday() == 2:
+        return "水曜日"
+    elif date.weekday() == 3:
+        return "木曜日"
+    elif date.weekday() == 4:
+        return "金曜日"
+    elif date.weekday() == 5:
+        return "土曜日"
+    elif date.weekday() == 6:
+        return "日曜日"

@@ -17,5 +17,4 @@ def solution_station_5(student_name):
     # if the student is found, return their team, otherwise return a message
     if not result.empty:
         return int(result.iloc[0]['Team'])
-    else:
-        return "Student not found"
+

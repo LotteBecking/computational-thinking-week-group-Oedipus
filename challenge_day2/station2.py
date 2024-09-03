@@ -19,19 +19,11 @@ def get_japanese_weekday(date_str):
     
     return japanese_day
 
-def find_matching_pattern(new_input, pattern_sets):
+def solution_station_2(new_input, pattern_sets):
     for sample_input, _, sample_output in pattern_sets:
-        if get_japanese_weekday(sample_input) == sample_output:
-            return get_japanese_weekday(new_input)
+        if solution_station_2(sample_input) == sample_output:
+            return solution_station_2(new_input)
     
     return "No matching pattern found."
 
-pattern_sets = [
-    ('2023-12-10', '2024-10-21', "日曜日"),
-    ('2023-06-08', '2024-02-12', "木曜日"),
-    ('2023-01-07', '2023-12-19', "土曜日")
-]
 
-new_input = input("Enter the new input date (YYYY-MM-DD): ")
-output = find_matching_pattern(new_input, pattern_sets)
-print(f"The output for {new_input} is {output}.")

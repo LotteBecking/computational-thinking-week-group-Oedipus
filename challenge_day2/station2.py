@@ -1,4 +1,5 @@
 from datetime import datetime
+
 def solution_station_2(date):
     date.weekday()
     if date.weekday() == 0:

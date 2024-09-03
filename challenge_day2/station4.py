@@ -1,4 +1,4 @@
-def solution_station_3(number):
+def solution_station_4(number):
     if number <= 1:
         return "false"
     if number <= 3:
@@ -13,5 +13,3 @@ def solution_station_3(number):
         i += 6
     
     return "true"
-
-print(solution_station_3(54)) 

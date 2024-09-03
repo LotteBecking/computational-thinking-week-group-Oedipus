@@ -13,7 +13,7 @@ def solution_station_2(date_str):
     }
     
     # Convert the string date into a datetime object
-    date_obj = datetime.datetime.strptime(date_str, "%Y-%m-%d")  # Adjusted format to match input
+    date_obj = datetime.datetime.strptime(date_str, "%Y-%m-%d")
     
     # Get the day of the week in English
     day_of_week = date_obj.strftime("%A")
